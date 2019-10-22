@@ -1,0 +1,52 @@
+<div class='card margin-top' >
+  <div class='card-header text-center'>
+   <h2>{{movie.title}}</h2>
+  </div>
+
+  <div class='card-body'>
+    <div class='row' >
+      <div class='col-md-8'>
+        <div class='row'>
+          <div class='col-md-4'>Name:</div>
+          <div class='col-md-8'>{{movie.title}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Code:</div>
+          <div class='col-md-8'>Some Code</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Genre:</div>
+          <div class='col-md-8'>{{movie.genre}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Release Year:</div>
+          <div class='col-md-8'>{{movie.releaseYear}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Description:</div>
+          <div class='col-md-8'>{{movie.description}}</div>
+        </div>
+        <div class='row'>
+          <div class='col-md-4'>Rating:</div>
+          <div class='col-md-8'>
+              {{movie.rating}}
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-4'>
+        <img class='center-block img-responsive'
+        [style.width.px]='300'
+        [style.margin.px]='2'
+        [src]='movie.image.url'
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class='card-footer'>
+    <button class='btn btn-dark' (click)='onBack()'>
+      <i class='fa fa-chevron-left'></i> Back
+    </button>
+  </div>
+</div>

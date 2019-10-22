@@ -1,0 +1,21 @@
+.lay-out{
+  margin: 40px;
+  
+}
+.image{
+  height:40em; 
+  background-size:cover;
+  width:auto;
+  background-image:url();
+  background-position:50% 50%;
+}
+.movies-margin{
+  margin-top: 40px;
+}
+.view-top{
+  margin-top: 20px;
+}
+.font-styling{
+  font-family:  Tahoma, Verdana, sans-serif;
+  font-size: 20px;
+}

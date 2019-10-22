@@ -1,0 +1,39 @@
+<div class="container-fluid lay-out image">
+  <div class="row">
+    <div class="col-md-6">
+      <form class="form-inline">
+        <div class="form-group mb-2">
+          <h4>Search by Title</h4>
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+          <input type="text" class="form-control" name="name" [(ngModel)]='listFilter' placeholder="Search Movie">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="container movies-margin">
+    <div class="row">
+      <div class="col-xs-12 col-md-4 view-top" *ngFor="let movie of filteredMovies">
+        <div class="card h-100">
+          <a href="#" [routerLink]="['/movies', movie.objectId]"><img class="card-img-top" src={{movie.image.url}}
+              alt=""></a>
+          <div class="card-body">
+            <h6 class="card-title">
+              {{'Title:'+ ' ' + movie.title}}
+            </h6>
+            <h6 class="card-title">
+              {{'Year:' + ' '+ movie.releaseYear}}
+            </h6>
+            <button class="btn btn-dark " [routerLink]="['/movies', movie.objectId]">View Details</button>
+            <a href="#" class="float-right" (click)='showHtmlToastr()' [routerLink]="['/movies']"><i
+                class="fa fa-heart"></i></a>
+
+                <h1>{{message}}</h1>
+             <button (click)= 'newMessage()' class="button">New Message</button>       
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
