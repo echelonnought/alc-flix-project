@@ -25,11 +25,10 @@
               {{'Year:' + ' '+ movie.releaseYear}}
             </h6>
             <button class="btn btn-dark " [routerLink]="['/movies', movie.objectId]">View Details</button>
-            <a href="#" class="float-right" (click)='showHtmlToastr()' [routerLink]="['/movies']"><i
+            <a href="#" class="float-right" (click)='showHtmlToastr()' (click)= 'newMessage()' [routerLink]="['/movies']"><i
                 class="fa fa-heart"></i></a>
 
-                <h1>{{message}}</h1>
-             <button (click)= 'newMessage()' class="button">New Message</button>       
+             
           </div>
         </div>
       </div>

@@ -11,6 +11,6 @@ export class SharedServices {
    currentMessage = this.messageSource.asObservable();
 
    changeMessage(movie: any) {
-     this.messageSource.next(movie)
+     this.messageSource.next(movie);
    }
 }

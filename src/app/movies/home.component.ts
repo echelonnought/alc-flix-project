@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit {
   _listFilter: string;
   errorMessage: void;
   message: string;
-  movie: IMovie;
   get listFilter(): string {
     return this._listFilter;
   }
@@ -45,9 +44,9 @@ export class HomeComponent implements OnInit {
       error: err => this.errorMessage
 
     });
-    
+
     this.sharedService.currentMessage.subscribe(
-     message => this.movie = message
+     message => this.message = message
     );
  }
   showToastr() {
@@ -60,5 +59,5 @@ export class HomeComponent implements OnInit {
 newMessage() {
   this.sharedService.changeMessage('hello from sibling');
 }
- 
+
 }
