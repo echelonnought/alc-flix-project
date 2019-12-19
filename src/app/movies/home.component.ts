@@ -10,27 +10,27 @@ import { SharedServices } from '../shared.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  _listFilter: string;
+  thisListFilter: string;
   errorMessage: void;
   message: string;
   get listFilter(): string {
-    return this._listFilter;
+    return this.thisListFilter;
   }
   set listFilter(value: string) {
-    this._listFilter = value;
-    this.filteredMovies = this.listFilter ? this.performFilter(this.listFilter) : this.movies;
+    this.thisListFilter = value;
+    this.filteredMovies = this.listFilter ? this.performFilter(this.listFilter) : this.movie;
   }
   filteredMovies: IMovie[];
-  movies: IMovie[] = [] ;
+  movie: any = {};
   constructor(private moviesdbService: MoviesdbService,
               private notifyMessage: NotificationService,
-               private sharedService: SharedServices) {
+              private sharedService: SharedServices) {
 
   }
 
   performFilter(filterBy: string): IMovie[] {
       filterBy = filterBy.toLocaleLowerCase();
-      return this.movies.filter((movie: IMovie) =>
+      return this.movie.filter((movie: IMovie) =>
       movie.title.toLocaleLowerCase().indexOf(filterBy) !== -1);
   }
 
@@ -38,8 +38,8 @@ export class HomeComponent implements OnInit {
     this.moviesdbService.getMovies()
     .subscribe({
       next: movies => {
-        this.movies = movies;
-        this.filteredMovies = this.movies;
+        this.movie = movies;
+        this.filteredMovies = this.movie;
       },
       error: err => this.errorMessage
 
