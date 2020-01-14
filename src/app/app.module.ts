@@ -6,7 +6,10 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {NgxPaginationModule} from 'ngx-pagination';
 
+import { WelcomeComponent } from './welcome/welcome.component';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
@@ -20,6 +23,7 @@ import { FavoriteComponent } from './favorites/favorites.component';
     AppComponent,
     NavComponent,
     FooterComponent,
+    WelcomeComponent,
     HomeComponent,
     MovieDetailsComponent,
     MovieImagePipe,
@@ -31,12 +35,16 @@ import { FavoriteComponent } from './favorites/favorites.component';
     HttpClientJsonpModule,
     FormsModule,
     RouterModule.forRoot([
+      { path: 'welcome', component: WelcomeComponent },
+      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: 'movies', component: HomeComponent },
       { path: 'favorites', component: FavoriteComponent},
-      { path: 'movies/:id', component: MovieDetailsComponent },
-      { path: '', redirectTo: 'movies', pathMatch: 'full'}
+      { path: 'movies/:id', component: MovieDetailsComponent }
+     
     ]),
     BrowserAnimationsModule,
+    NgxPaginationModule,
+    MDBBootstrapModule.forRoot(),
     ToastrModule.forRoot(),
     FontAwesomeModule
   ],

@@ -16,11 +16,11 @@ export class MoviesdbService {
 
   getMovies(): Observable<unknown> {
     console.log('I am seeing all movies');
-    return this.http.get<IMovie[]>(this.apiUrl)
-    .pipe(
-      tap(data => console.log('All: ' + JSON.stringify(data))),
-      catchError(this.handleError)
-    );
+    return this.http.get<IMovie[]>(this.apiUrl);
+    // .pipe(
+    //   tap(data => console.log('All: ' + JSON.stringify(data))),
+    //   catchError(this.handleError)
+    // );
   }
   getMovie(id: number): Observable<IMovie | undefined> {
     return this.getMovies().pipe(

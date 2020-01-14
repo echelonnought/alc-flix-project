@@ -1,21 +1,32 @@
 .lay-out{
   margin: 40px;
-  
+
 }
 .image{
-  height:40em; 
+  height:40em;
   background-size:cover;
   width:auto;
   background-image:url();
   background-position:50% 50%;
 }
 .movies-margin{
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 120px;
+}
+
+.movie-border {
+  border: red 2px solid;
 }
 .view-top{
   margin-top: 20px;
 }
 .font-styling{
-  font-family:  Tahoma, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
+}
+
+.justify-content-center {
+  margin-top: 40px;
+  display: flex !important;
+  justify-content: center !important;
 }

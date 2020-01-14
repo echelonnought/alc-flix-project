@@ -1,5 +1,5 @@
 <div class='card margin-top' >
-  <div class='card-header text-center'>
+  <div class='card-header text-center color-scheme'>
    <h2>{{movie.title}}</h2>
   </div>
 
@@ -10,10 +10,7 @@
           <div class='col-md-4'>Name:</div>
           <div class='col-md-8'>{{movie.title}}</div>
         </div>
-        <div class='row'>
-          <div class='col-md-4'>Code:</div>
-          <div class='col-md-8'>Some Code</div>
-        </div>
+        
         <div class='row'>
           <div class='col-md-4'>Genre:</div>
           <div class='col-md-8'>{{movie.genre}}</div>
@@ -44,7 +41,7 @@
     </div>
   </div>
 
-  <div class='card-footer'>
+  <div class='card-footer color-scheme'>
     <button class='btn btn-dark' (click)='onBack()'>
       <i class='fa fa-chevron-left'></i> Back
     </button>

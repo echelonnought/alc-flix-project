@@ -1,0 +1,8 @@
+div {
+  width: 100%;
+}
+.backgroung{
+  height:40em; background-size:cover; width:auto;
+  background-image:url('/assets/bohem.jpg');
+  background-position:50% 50%;
+}

@@ -1,5 +1,5 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark background">
-  <a class="navbar-brand" href="#" [routerLink]="['/movies']"><img src="assets/net2.png" alt="home"
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark  background ">
+  <a class="navbar-brand" href="#" [routerLink]="['/welcome']"><img src="assets/newflix.jpg" alt="home"
       style="border-radius:50% ; height: 60px; width:180px;"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,13 +9,26 @@
 
     <ul class="navbar-nav mr-auto color">
       <li class="nav-item active">
-        <a class="nav-link" href="#" [routerLink]="['/movies']" style="color: red;">Movies <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#" [routerLink]="['/welcome']" style="color: rgb(247, 23, 23);">Home <span
+            class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#" style="color:red;" [routerLink]="['/favorites']" >Favorites <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#" [routerLink]="['/movies']" style="color: rgb(247, 23, 23);">Movies <span
+            class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="color:rgb(247, 23, 23);" [routerLink]="['/favorites']">Favorites <span
+            class="sr-only">(current)</span></a>
       </li>
     </ul>
-
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color:rgb(247, 23, 23);">Log In</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color:rgb(247, 23, 23);">Log Out</a>
+      </li>
+    </ul>
 
   </div>
 </nav>
